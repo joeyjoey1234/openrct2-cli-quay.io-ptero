@@ -31,8 +31,7 @@ RUN apt-get update \
  && sysctl -w net.ipv6.conf.lo.disable_ipv6=1 
 
 # Set up ordinary user
-RUN useradd -m container 
-USER container
+USER root
 WORKDIR /home/container
 
 
