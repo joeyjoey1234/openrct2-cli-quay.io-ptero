@@ -28,7 +28,7 @@ RUN apt-get update \
  && openrct2-cli --version
 
 # Set up ordinary user
-RUN adduser -m  container 
+RUN adduser -m container 
 USER container
 WORKDIR /home/container
 
