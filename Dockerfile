@@ -21,7 +21,7 @@ FROM quay.io/catthehacker/ubuntu:act-20.04
 # Install OpenRCT2
 COPY --from=build-env /openrct2-install /openrct2-install
 RUN apt-get update \
- && apt-get install -y rsync ca-certificates libduktape205 libpng16-16 libzip5 libcurl4 libfreetype6 libfontconfig1 libicu66  libsdl2-mixer-2.0-0 libsdl2-image-2.0-0 libsdl2-2.0-0 \
+ && apt-get install -y rsync ca-certificates libduktape205 libpng16-16 libzip5 libcurl4 libfreetype6 libfontconfig1 libicu66  libsdl2-mixer-2.0-0 libsdl2-image-2.0-0 libsdl2-2.0-0 apt-get install libspeex-dev \
  && rm -rf /var/lib/apt/lists/* \
  && rsync -a /openrct2-install/* / \
  && rm -rf /openrct2-install \
